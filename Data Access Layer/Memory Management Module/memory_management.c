@@ -19,9 +19,9 @@
  * Parameters : New ID
  * return : Return status 1 if it's already exist and 0 if it not exist
  */
-unsigned int static MMM_nCheckIfIdIsExist(student_t *sHead, unsigned int Local_nNew_Id);
+unsigned int  MMM_nCheckIfIdIsExist(student_t *sHead, unsigned int Local_nNew_Id);
 
-unsigned int static MMM_nCheckIfIdIsExist(student_t *sHead, unsigned int Local_nNew_Id)
+unsigned int  MMM_nCheckIfIdIsExist(student_t *sHead, unsigned int Local_nNew_Id)
 {
     student_t* Local_sLast = NULL;
     unsigned int Local_nLength = 0;
