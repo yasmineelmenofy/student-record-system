@@ -58,8 +58,8 @@ void MMM_vAddStudentAtFrist(student_t** sHead) // this student will be added at 
     student_t* Local_sNew_node = NULL;
     unsigned int Local_nNew_Id = 0;
     unsigned int Local_nReturn_Status = 1;
-    char cNewName[50];
-    char cNewPassword[50];
+    char Local_cNewName[50];
+    char Local_cNewPassword[50];
 
     Local_sNew_node = (student_t *)malloc(sizeof(student_t));
 
@@ -81,9 +81,9 @@ void MMM_vAddStudentAtFrist(student_t** sHead) // this student will be added at 
 
             printf("Please enter student name : ");
             fflush(stdin);
-            gets(cNewName);
-            Local_sNew_node->cName = (student_t *)malloc(strlen(cNewName) + 1);
-            strcpy(Local_sNew_node->cName, cNewName);
+            gets(Local_cNewName);
+            Local_sNew_node->cName = (student_t *)malloc(strlen(Local_cNewName) + 1);
+            strcpy(Local_sNew_node->cName, Local_cNewName);
 
             printf("Please enter student total degree : ");
             scanf("%f", &Local_sNew_node->fTotal_Grade);
@@ -97,9 +97,9 @@ void MMM_vAddStudentAtFrist(student_t** sHead) // this student will be added at 
 
             printf("Please enter student password : ");
             fflush(stdin);
-            gets(cNewPassword);
-            Local_sNew_node->cPassword = (student_t *)malloc(strlen(cNewPassword) + 1);
-            strcpy(Local_sNew_node->cPassword, cNewPassword);
+            gets(Local_cNewPassword);
+            Local_sNew_node->cPassword = (student_t *)malloc(strlen(Local_cNewPassword) + 1);
+            strcpy(Local_sNew_node->cPassword, Local_cNewPassword);
 
             Local_sNew_node->sNext = *sHead;
             *sHead = Local_sNew_node;
