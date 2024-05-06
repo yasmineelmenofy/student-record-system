@@ -22,10 +22,10 @@
 /*
  * Use this function to record the information about a student in the file.
  */
-void DFF_vWriteStudentRecord(const char *filename_studentrecord, const StudentRecord *record) {
+void DFF_vWriteStudentRecord(const char *filename_studentrecord, const student_t *record) {
     FILE *file = fopen(filename_studentrecord, "a");
     if (file != NULL) {
-        fprintf(file, "%d,%s,%s,%.2f\n", record->id, record->name, record->course, record->gpa);
+       fprintf(file, "%s,%s,%s,%d,%.2f,%d,%s\n", record->cName, record->cUsername, record->cPassword, record->nUnique_Id, record->fTotal_Grade, record->nAge, record->cGender);
         fclose(file);
     } else {
         printf("Error: Unable to open student records file %s\n", filename_studentrecord);
@@ -56,12 +56,12 @@ void DFF_vReadStudentRecords(const char *filename_studentrecord) {
         int ch;
         while ((ch = getc(file)) != EOF && row < MAX_STUDENTS) {
             if (ch == ',' || ch == '\n') {
-                records[row][col] = '\0'; // Null-terminate the string
-                row++; // Move to the next row
-                col = 0; // Reset column index
+                records[row][col] = '\0';
+                row++;
+                col = 0;
             } else {
                 records[row][col] = ch;
-                col++; // Move to the next column
+                col++;
             }
         }
         fclose(file);

@@ -21,16 +21,24 @@ int main() {
         switch (choice) {
             case 1:
                 {
-                   StudentRecord student;
+     student_t student;
     printf("Enter student ID: ");
-    scanf("%d", &student.id);
-    printf("Enter student name: ");
-    scanf(" %[^\n]", student.name);
-    printf("Enter student course: ");
-    scanf(" %[^\n]", student.course);
-    printf("Enter student GPA: ");
-    scanf("%f", &student.gpa);
-
+scanf("%u", &student.nUnique_Id);
+printf("Enter student name: ");
+student.cName = malloc(50 * sizeof(char));
+scanf(" %[^\n]", student.cName);
+printf("Enter student GPA: ");
+scanf("%f", &student.fTotal_Grade);
+printf("Enter student gender: ");
+scanf("%49s", student.cGender);
+printf("Enter student age: ");
+scanf("%u", &student.nAge);
+printf("Enter student username: ");
+student.cUsername = malloc(50 * sizeof(char));
+scanf(" %[^\n]", student.cUsername);
+printf("Enter student password: ");
+student.cPassword = malloc(50 * sizeof(char));
+scanf(" %[^\n]", student.cPassword);
     DFF_vWriteStudentRecord(filename_studentrecord, &student);
 }
 

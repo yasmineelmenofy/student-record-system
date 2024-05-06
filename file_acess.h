@@ -10,7 +10,7 @@
  */
 
 
-void DFF_vWriteStudentRecord(const char *filename, const StudentRecord *record);
+void DFF_vWriteStudentRecord(const char *filename, const student_t *record);
 void DFF_vWriteAdminPassword(const char *filename, const AdminPassword *admin);
 void DFF_vReadStudentRecords(const char *filename);
 void DFF_vReadAdminPasswords(const char *filename);
