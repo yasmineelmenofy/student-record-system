@@ -27,7 +27,6 @@ typedef struct
 
 /**================  Basic Functions  =================**/
 
-
  /*
  * Breif : This function used to check in Student ID and password
  * Parameters : Pointer to linked list head
@@ -41,8 +40,6 @@ void AM_vStudentChecking(student_t* sHead);
  * return : void
  */
 void AM_vUserChecking(void);
-
-
 
 /*
  * Breif : This function used to determine who is the user (Admin or Student)
