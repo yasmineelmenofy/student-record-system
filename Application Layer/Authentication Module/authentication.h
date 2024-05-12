@@ -44,8 +44,8 @@ void AM_vUserChecking(void);
 /*
  * Breif : This function used to determine who is the user (Admin or Student)
  * Parameters : Pointer to linked list head
- * return : void
+ * return : return the mode
  */
-void AM_vUserDetermination(student_t* sHead);
+unsigned int AM_vUserDetermination(student_t* sHead);
 
 #endif // _AUTHENTICATION_H

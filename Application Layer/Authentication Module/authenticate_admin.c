@@ -94,7 +94,7 @@ void AM_vStudentChecking(student_t* sHead)
     else{/*Nothing*/}
 }
 
-void AM_vUserDetermination(student_t* sHead)
+unsigned int AM_vUserDetermination(student_t* sHead)
 {
     unsigned int Local_nMode = 0;
 
@@ -116,4 +116,5 @@ void AM_vUserDetermination(student_t* sHead)
         default:
         printf("Sorry wrong choice!! \n");
     }
+    return Local_nMode;
 }
